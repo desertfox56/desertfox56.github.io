@@ -1,0 +1,338 @@
+/* Общие стили и сбросы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffcc00; /* Золотистый цвет для акцентов */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* центрируем изображения по горизонтали */
+}
+h2{
+    text-align: center;
+}
+/* Шапка сайта */
+header {
+    background-color: #ffffff; /* Белый фон */
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex; /* Добавляем flex */
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Центрируем элементы по горизонтали */
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+    
+}
+
+.logo img {
+    width: auto; /* Убираем ограничение по ширине */
+    max-width: 100px; /* Устанавливаем максимальную ширину для логотипа */
+    height: auto; /* Убираем ограничение по высоте */
+    margin: 0;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    margin: 0;
+}
+
+/* Главный раздел */
+.intro {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.intro p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 20px auto 0;
+}
+
+.intro img {
+    max-height: 300px; /* Ограничиваем высоту изображения */
+    width: auto; /* Ширина автоматически подстроится, чтобы сохранить пропорции */
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* Медиа-запросы для адаптивности (пример) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Популярные рецепты */
+.popular-recipes {
+    padding: 40px 0;
+    background-color: #ffffff;
+    text-align: center; /* Центрируем заголовок */
+}
+
+.cards-container {
+    display: flex; /* Делаем карточки флекс-элементами */
+    justify-content: space-around; /* Распределяем карточки равномерно с пространством между ними */
+    flex-wrap: wrap; /* Переносим карточки на новую строку, если они не помещаются */
+    gap: 50px; /* Расстояние между карточками */
+}
+
+.recipe-card {
+    flex: 1; /* Карточки занимают всю доступную ширину */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+    text-align: left;
+    padding: 20px; /* Добавляем отступы вокруг содержимого карточки */
+    border: 1px solid #e0e0e0; /* Добавляем тонкую рамку вокруг карточки */
+    border-radius: 10px; /* Скругляем углы карточки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень к карточке */
+}
+
+.recipe-card img {
+    border-radius: 10px;
+    box-shadow: none; /* Убираем тень у изображения, так как она уже есть у карточки */
+    width: 300px; /* Устанавливаем ширину */
+    height: 200px; /* Устанавливаем высоту */
+    display: block;
+    margin: 20px auto; /* Центрируем изображение по горизонтали */
+    object-fit: cover;
+}
+
+.popular-recipes h2 {
+    margin-bottom: 30px; /* Увеличиваем отступ между заголовком и карточками */
+}
+
+
+/* Истории кухонь мира */
+.world-cuisine-stories {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center; /* Центрируем заголовок */
+}
+.world-cuisine-stories h2 {
+    margin-bottom: 30px; /* Отступ между заголовком и статьями */
+}
+.cuisine-story {
+    position: relative; 
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.cuisine-story img {
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    max-height: 300px; /* Ограничиваем высоту изображения */
+    width: auto; /* Ширина автоматически подстроится, чтобы сохранить пропорции */
+    margin-right: 20px; /* Отступ между изображением и текстом */
+}
+
+.cuisine-story h3 {
+    position: absolute; /* Абсолютное позиционирование для заголовка */
+    bottom: 10px; /* Отступ снизу */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translateX(-50%); /* Смещение на половину своей ширины для точного центрирования */
+    background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый фон для читаемости текста */
+    padding: 5px 10px; /* Отступы вокруг текста */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.cuisine-story p {
+    flex: 2; /* Занимает 2 части доступного пространства */
+    margin-right: 20px; /* Отступ между текстом и кнопкой */
+}
+
+.read-more-btn {
+    align-self: flex-end; /* Расположение кнопки внизу блока */
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #e5b400;
+}
+.image-wrapper {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; /* Добавляем вертикальное направление */
+    align-items: start; /* Выравнивание элементов по началу оси */
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cuisine-story h3 {
+    text-align: left; /* Выравнивание текста по левому краю */
+    margin-top: 10px; /* Отступ сверху */
+    margin-bottom: 10px; /* Отступ снизу */
+   
+}
+
+
+/* Видео-мастер-классы */
+.video-masterclasses {
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+.video-item {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.video-item iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ingredients-link:hover {
+    background-color: #2a2a2a;
+}
+
+footer {
+    background-color: #3d3d3d;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.footer-logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.footer-logo p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #ffcc00;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 25px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.contact-info {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2a2a2a;
+}

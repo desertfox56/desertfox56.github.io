@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://desertfox56.github.io/culinary_compass_test/sitemap.xml

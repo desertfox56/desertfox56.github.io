@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffcc00; /* Золотистый цвет для акцентов */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* центрируем изображения по горизонтали */
+}
+h2{
+    text-align: center;
+}
+/* Шапка сайта */
+header {
+    background-color: #ffffff; /* Белый фон */
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: auto; /* Убираем ограничение по ширине */
+    max-width: 100px; /* Устанавливаем максимальную ширину для логотипа */
+    height: auto; /* Убираем ограничение по высоте */
+    /*margin-right: 10px;*/
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    margin: 0;
+}
+
+/* Медиа-запросы для адаптивности (пример) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+footer {
+    background-color: #3d3d3d;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.footer-logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.footer-logo p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #ffffff; /* Цвет иконок */
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color); /* Цвет иконок при наведении */
+}
+
+.footer-social i {
+    font-size: 20px; /* Размер иконок */
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.contact-info {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2a2a2a;
+}
